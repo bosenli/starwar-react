@@ -36,3 +36,28 @@
     transform: rotate(360deg);
   }
 }
+
+
+.App {
+  background-color: hsl(224, 88%, 46%);
+}
+
+.cards{
+  text-align: center;
+  padding:  10px;
+  height: 30vh;
+  width: 20vw;
+  border: 2px solid black;
+  color:rgb(255, 251, 25);
+  font-weight: bolder;
+  margin: 10vh 35vw;
+  background-color: #000000;
+}
+
+header{
+  background-color: black;
+  color: rgb(241, 255, 38);
+  padding: 10px;
+  text-align: center;
+  font-weight: bolder;
+}

@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+import { useState, useEffect } from 'react';
 import './App.css';
+import StarshipCard from './components/StarshipCard';
+import { fetchData } from './services/StarwarAPI.js'
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [starships, setStarships] = useState([])
+
+  useEffect(async () =>{
+    const data = await fetchData()
+    setStarships(data)
+  },[])
+  
+console.log(starships)
+
+return (
+  <div className="App">
+    <header className='title'>STAR WARS</header>
+  {starships.map((data, index) =>{
+    return <StarshipCard data={data} key={index}/>
+  })}
+    
+  </div>
+);
 }
 
 export default App;
