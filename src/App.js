@@ -1,3 +1,6 @@
+
+//hw link: https://perscholas.instructure.com/courses/892/assignments/159495
+
 import { useState, useEffect } from 'react';
 import './App.css';
 import StarshipCard from './components/StarshipCard';
